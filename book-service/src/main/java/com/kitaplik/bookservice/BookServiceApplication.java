@@ -5,12 +5,15 @@ import com.kitaplik.bookservice.repository.BookRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 import org.springframework.context.annotation.Bean;
 
 import java.util.Arrays;
 import java.util.List;
 
 @SpringBootApplication
+@EnableEurekaServer
 public class BookServiceApplication implements CommandLineRunner {
 
 	private final BookRepository bookRepository;

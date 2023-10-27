@@ -5,5 +5,8 @@ public record AddBookRequest(
         String id,
         String isbn
 ) {
+    public String getId() {
+        return id;
+    }
 
 }

@@ -47,7 +47,19 @@ public class LibraryService {
         return new LibraryDto(newLibrary.getId());
     }
 
+    public void addBookToLibrary(AddBookRequest request){
 
+        String bookId = bookServiceClient.getBookByIsbn(request.getIsbn()).getBody().getBookId();
+
+        Library library = libraryRepository.findById(request.getId())
+                .orElseThrow(() -> new LibraryNotFoundException("Library could not found by id : " + request.getId()));
+
+        library.getuserBook().add(bookId);
+
+
+        libraryRepository.save(library);
+
+    }
 
 
 

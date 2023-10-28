@@ -4,7 +4,7 @@ public record BookDto(
 
         BookIdDto id,
         String title,
-        int year,
+        int bookYear,
         String author,
         String pressName
 ){

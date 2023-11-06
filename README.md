@@ -3,4 +3,4 @@
 
 ---
 ### Overall Architecture
-<img src="https://img.imgyukle.com/2023/11/07/yQpUFy.png" alt="project-screenshot" width="1920" height="400/">
+<img src="https://ibb.co/yyrhJ4T" alt="project-screenshot" width="1920" height="400/">

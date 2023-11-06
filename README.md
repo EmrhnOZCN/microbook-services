@@ -3,4 +3,4 @@
 
 ---
 ### Overall Architecture
-<img src="https://ibb.co/yyrhJ4T" alt="project-screenshot" width="1920" height="400/">
+<img src="<a href="https://ibb.co/yyrhJ4T"><img src="https://i.ibb.co/4THsx1y/microserv.png" alt="microserv" border="0"></a>" alt="project-screenshot" width="1920" height="400/">

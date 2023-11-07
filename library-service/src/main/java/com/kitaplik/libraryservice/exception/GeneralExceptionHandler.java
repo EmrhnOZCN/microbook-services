@@ -1,6 +1,7 @@
 package com.kitaplik.libraryservice.exception;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -14,5 +15,8 @@ public class GeneralExceptionHandler {
 
     }
 
-
+    @ExceptionHandler(BookNotFoundException.class)
+    public ResponseEntity<ExceptionMessage> handle(BookNotFoundException exception){
+        return new ResponseEntity<>(exception.getExceptionMessage(), HttpStatusCode.valueOf(exception.getExceptionMessage().status()));
+    }
 }

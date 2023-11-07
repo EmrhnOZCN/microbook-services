@@ -5,6 +5,7 @@ import com.kitaplik.bookservice.dto.BookIdDto;
 import com.kitaplik.bookservice.exception.BookNotFoundException;
 import com.kitaplik.bookservice.repository.BookRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import java.util.List;
 import java.util.stream.Collectors;

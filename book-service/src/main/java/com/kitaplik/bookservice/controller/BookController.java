@@ -6,7 +6,9 @@ import com.kitaplik.bookservice.dto.BookIdDto;
 import com.kitaplik.bookservice.model.Book;
 import com.kitaplik.bookservice.service.BookService;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +18,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/v1/book")
+@Validated
 public class BookController {
 
     private final BookService bookService;
@@ -31,14 +34,14 @@ public class BookController {
     }
 
     @GetMapping("/isbn/{isbn}")
-    public ResponseEntity<BookIdDto> getBookByIsbn(@PathVariable @NotBlank String isbn){
+    public ResponseEntity<BookIdDto> getBookByIsbn(@PathVariable @NotEmpty String isbn){
 
         return ResponseEntity.ok(bookService.findByIsbn(isbn));
 
     }
 
     @GetMapping("/id/{id}")
-    public ResponseEntity<BookDto> getBookById(@PathVariable @NotBlank String id){
+    public ResponseEntity<BookDto> getBookById(@PathVariable @NotEmpty String id){
 
         return ResponseEntity.ok(bookService.findBookDetailsById(id));
 

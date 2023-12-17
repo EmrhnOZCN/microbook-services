@@ -20,9 +20,11 @@ public class LibraryController {
 
     private final Environment environment;
 
-    public LibraryController(LibraryService libraryService, Environment environment) {
+    private final Integer count;
+    public LibraryController(LibraryService libraryService, Environment environment, Integer count) {
         this.libraryService = libraryService;
         this.environment = environment;
+        this.count = count;
     }
 
 
@@ -52,6 +54,10 @@ public class LibraryController {
     }
 
 
+    @GetMapping("/count")
+    public String getCount() {
+        return "Library service count: " + count;
+    }
 
 
 

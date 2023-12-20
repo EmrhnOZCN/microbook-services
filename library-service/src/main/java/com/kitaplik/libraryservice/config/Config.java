@@ -21,7 +21,7 @@ public class Config {
         return Logger.Level.FULL;
     }*/
 
-    @Value("${library.service.count}")
+    @Value("${library-service.book.count}")
     private Integer count;
 
     @Bean

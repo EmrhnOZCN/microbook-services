@@ -3,4 +3,4 @@
 
 ---
 ### Overall Architecture
-![Overall Architecture](assets/micoservice.png)
+![Overall Architecture](assets/microservice.png)

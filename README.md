@@ -3,4 +3,4 @@
 
 ---
 ### Overall Architecture
-![Overall Architecture](assets/micoserv2.png)
+![Overall Architecture](assets/micoservice.png)
